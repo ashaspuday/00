@@ -3,7 +3,7 @@ pipeline {
 
     imagename = "{ashaspuday}/mynginxapp"  
 
-    registryCredential = 'wo7and-dockerhub'
+    registryCredential = 'ashaspuday'
 
     dockerImage = ''
 
