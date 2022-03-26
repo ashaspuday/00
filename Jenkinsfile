@@ -1,41 +1,32 @@
 pipeline {
+  environment {
 
+    imagename = "{yourdockerhubid}/mynginxapp"  
+
+    registryCredential = 'wo7and-dockerhub'
+
+    dockerImage = ''
+
+    }
+    
     agent any
 
  
 
     stages {
 
-        stage('Build') {
+        s stages {
+
+        stage('Git Clone') {
 
             steps {
 
-                echo 'Building..'
+                git([url: 'https://github.com/ashaspuday/Jenkinsforkdemo1.git', branch: 'master', credentialsId: 'ashaspuday'])
 
             }
 
         }
 
-        stage('Test') {
+ 
 
-            steps {
-
-                echo 'Testing..'
-
-            }
-
-        }
-
-        stage('Deploy') {
-
-            steps {
-
-                echo 'Deploying....'
-
-            }
-
-        }
-
-    }
-
-}
+ 
