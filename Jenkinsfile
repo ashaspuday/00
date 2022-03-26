@@ -15,7 +15,7 @@ pipeline {
 
     stages {
 
-        s stages {
+         stages {
 
         stage('Git Clone') {
 
@@ -26,6 +26,7 @@ pipeline {
             }
 
         }
+         }
 
  
 
